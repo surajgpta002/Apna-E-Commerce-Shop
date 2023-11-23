@@ -7,7 +7,3 @@ const connectDatabase = () => {
 };
 
 module.exports = connectDatabase;
-
-
-//ApnaEShop
-//apnaecommerce023@gmail.com

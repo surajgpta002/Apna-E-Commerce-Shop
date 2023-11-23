@@ -42,11 +42,11 @@ router
   .route("/admin/user/:id")
   .get(isAuthenticatedUser, authorizeRoles("admin"), getSingleUser);
 
-  router
+router
   .route("/admin/user/:id")
   .put(isAuthenticatedUser, authorizeRoles("admin"), updateUserRole);
 
-  router
+router
   .route("/admin/user/:id")
   .delete(isAuthenticatedUser, authorizeRoles("admin"), deleteUser);
 

@@ -31,6 +31,3 @@ process.on("unhandledRejection", (err) => {
     process.exit(1);
   });
 });
-
-//GBYYyq5vsNf6adOz
-// DB_URI = "mongodb://127.0.0.1:27017/Ecommerce"
