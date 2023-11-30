@@ -1,9 +1,15 @@
 import React from "react";
 import { ReactNavbar } from "overlay-navbar";
 import logo from "../../../images/logo.png";
-import { FaUserAlt } from "react-icons/fa";
-import { FaSearch } from "react-icons/fa";
-import { FaShoppingCart } from "react-icons/fa";
+// import { FaUserAlt } from "react-icons/fa";
+// import { FaSearch } from "react-icons/fa";
+import { ImSearch } from "react-icons/im";
+import { FaUserPlus } from "react-icons/fa";
+
+// import { FaShoppingCart } from "react-icons/fa";
+import { FaCartArrowDown } from "react-icons/fa";
+
+
 
 const options = {
   burgerColorHover: "#eb4034",
@@ -29,11 +35,11 @@ const options = {
   link1ColorHover: "#eb4034",
   link1Margin: "1vmax",
   searchIcon: true,
-  SearchIconElement: FaSearch,
+  SearchIconElement: ImSearch,
   cartIcon: true,
-  CartIconElement: FaShoppingCart,
+  CartIconElement: FaCartArrowDown,
   profileIcon: true,
-  ProfileIconElement: FaUserAlt,
+  ProfileIconElement: FaUserPlus,
   profileIconUrl: "/login",
   profileIconColor: "rgba(35, 35, 35,0.8)",
   searchIconColor: "rgba(35, 35, 35,0.8)",
