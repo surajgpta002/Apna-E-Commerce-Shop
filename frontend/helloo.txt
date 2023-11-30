@@ -1,2 +1,6 @@
 <React.StrictMode></React.StrictMode>
 
+DB_URI = "mongodb://127.0.0.1:27017/Ecommerce"
+
+ApnaEShop
+apnaecommerce023@gmail.com
