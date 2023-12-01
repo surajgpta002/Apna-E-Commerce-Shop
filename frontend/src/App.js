@@ -37,6 +37,7 @@ function App() {
       {isAuthenticated && <UserOptions user={user} />}
 
       <Routes>
+
         <Route exact path="/" element={<Home />} />
 
         <Route exact path="/product/:id" element={<ProductDetails />} />
@@ -46,23 +47,15 @@ function App() {
         <Route path="/products/:keyword" element={<Products />} />
 
         <Route exact path="/search" element={<Search />} />
-        {/* 
-        {isAuthenticated && (
+
+
+        <Route element={<ProtectedRoute />}>
           <Route exact path="/account" element={<Profile />} />
-        )} */}
+        </Route>
+
+
 
         <Route exact path="/login" element={<LoginSignUp />} />
-
-        <Route
-          path="/account"
-          element={
-            <ProtectedRoute >
-              <Profile />
-            </ProtectedRoute>
-          }
-        />
-
-        {/* <ProtectedRoute exact path="/account" element={<Profile />} /> */}
       </Routes>
 
       <Footer />

@@ -6,15 +6,13 @@ import DashboardIcon from "@material-ui/icons/Dashboard";
 import PersonIcon from "@material-ui/icons/Person";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import ListAltIcon from "@material-ui/icons/ListAlt";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useAlert } from "react-alert";
 import { logout } from "../../../actions/userAction";
 import { useDispatch } from "react-redux";
 
 const UserOptions = ({ user }) => {
-
   const [open, setOpen] = useState(false);
-  const [redirect, setRedirect] = useState(false);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const alert = useAlert();
@@ -47,11 +45,6 @@ const UserOptions = ({ user }) => {
   function logoutUser() {
     dispatch(logout());
     alert.success("Logout Successfully");
-    setRedirect(true);
-  }
-
-  if (redirect) {
-    return <Navigate to="/login" />;
   }
 
   return (
