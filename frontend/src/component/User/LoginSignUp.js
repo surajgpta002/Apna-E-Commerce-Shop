@@ -50,7 +50,7 @@ const LoginSignUp = () => {
     myForm.set("email", email);
     myForm.set("password", password);
     myForm.set("avatar", avatar);
-    
+
     dispatch(register(myForm));
   };
 
@@ -66,7 +66,6 @@ const LoginSignUp = () => {
       };
 
       reader.readAsDataURL(e.target.files[0]);
-
     } else {
       setUser({ ...user, [e.target.name]: e.target.value });
     }
