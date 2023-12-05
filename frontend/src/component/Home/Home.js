@@ -1,5 +1,5 @@
 import React from "react";
-import { LuMouse } from "react-icons/lu";
+// import { LuMouse } from "react-icons/lu";
 import "./Home.css";
 import Metadata from "../layout/MetaData.js";
 import { clearErrors, getProduct } from "../../actions/productAction.js";
@@ -31,14 +31,14 @@ const Home = () => {
           <Metadata title="ECOMMERCE" />
 
           <div className="banner">
-            {/* <p>Welcome to Ecommerce</p> */}
+            <p>Welcome to Apna Ecommerce</p>
             <h1>FIND AMAZING PRODUCTS BELOW</h1>
 
-            <a href="#container">
+            {/* <a href="#container">
               <button>
                 Scroll <LuMouse />
               </button>
-            </a>
+            </a> */}
           </div>
 
           <h2 className="homeHeading">Featured Products</h2>
