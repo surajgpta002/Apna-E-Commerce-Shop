@@ -27,7 +27,8 @@ import Payment from "./component/Cart/Payment.js";
 import ElementsLayout from "./component/Route/ElementsLayout.js";
 import { loadStripe } from "@stripe/stripe-js";
 import OrderSuccess from "./component/Cart/OrderSuccess.js";
-// import MyOrders from "./component/Order/MyOrders.js";
+import MyOrders from "./component/Order/MyOrders.js";
+import OrderDetails from "./component/Order/OrderDetails.js";
 
 function App() {
   const dispatch = useDispatch();
@@ -86,7 +87,8 @@ function App() {
           )}
 
           <Route exact path="/success" element={<OrderSuccess />} />
-          {/* <Route exact path="/orders" element={<MyOrders />} /> */}
+          <Route exact path="/orders" element={<MyOrders />} />
+          <Route exact path="/order/:id" element={<OrderDetails />} />
         </Route>
 
         <Route exact path="/password/forgot" element={<ForgotPassword />} />
