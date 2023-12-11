@@ -228,18 +228,15 @@ exports.getSingleUser = catchAsyncErrors(async (req, res, next) => {
   });
 });
 
-//Update User Role --Admin
+// update User Role -- Admin
 exports.updateUserRole = catchAsyncErrors(async (req, res, next) => {
   const newUserData = {
     name: req.body.name,
     email: req.body.email,
-    role: req.user.role,
+    role: req.body.role,
   };
-  // if (!req.body.name || !req.body.email || !req.user.role) {
-  //   return next(new ErrorHandler("Please Enter New Email And Password", 400));
-  // }
 
-  const user = await User.findByIdAndUpdate(req.params.id, newUserData, {
+  await User.findByIdAndUpdate(req.params.id, newUserData, {
     new: true,
     runValidators: true,
     useFindAndModify: false,
@@ -259,6 +256,10 @@ exports.deleteUser = catchAsyncErrors(async (req, res, next) => {
       new ErrorHandler(`User does not exist with Id: ${req.params.id}`, 400)
     );
   }
+
+  const imageId = user.avatar.public_id;
+
+  await cloudinary.v2.uploader.destroy(imageId);
 
   await User.findByIdAndDelete(req.params.id);
 
