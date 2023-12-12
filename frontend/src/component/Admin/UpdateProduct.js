@@ -1,11 +1,11 @@
-import React, {  useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
   clearErrors,
   updateProduct,
   getProductDetails,
 } from "../../actions/productAction";
-import { useParams , useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useAlert } from "react-alert";
 import { Button } from "@material-ui/core";
 import MetaData from "../layout/MetaData";
@@ -18,7 +18,6 @@ import SideBar from "./Sidebar";
 import { UPDATE_PRODUCT_RESET } from "../../constants/productConstants";
 
 const UpdateProduct = () => {
-
   const dispatch = useDispatch();
   const { id } = useParams();
   const navigate = useNavigate();

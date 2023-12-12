@@ -1,5 +1,4 @@
 import React from "react";
-// import { LuMouse } from "react-icons/lu";
 import "./Home.css";
 import Metadata from "../layout/MetaData.js";
 import { clearErrors, getProduct } from "../../actions/productAction.js";
@@ -16,8 +15,8 @@ const Home = () => {
 
   useEffect(() => {
     if (error) {
-      alert.error(error)
-      dispatch(clearErrors())
+      alert.error(error);
+      dispatch(clearErrors());
     }
     dispatch(getProduct());
   }, [dispatch, error, alert]);
@@ -31,14 +30,7 @@ const Home = () => {
           <Metadata title="ECOMMERCE" />
 
           <div className="banner">
-            <p>Welcome to Apna Ecommerce</p>
-            <h1>FIND AMAZING PRODUCTS BELOW</h1>
-
-            {/* <a href="#container">
-              <button>
-                Scroll <LuMouse />
-              </button>
-            </a> */}
+            <h1>Welcome to Apna E Commerce Shop</h1>
           </div>
 
           <h2 className="homeHeading">Featured Products</h2>

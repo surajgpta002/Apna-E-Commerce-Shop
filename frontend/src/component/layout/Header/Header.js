@@ -1,15 +1,9 @@
 import React from "react";
 import { ReactNavbar } from "overlay-navbar";
 import logo from "../../../images/logo.png";
-// import { FaUserAlt } from "react-icons/fa";
-// import { FaSearch } from "react-icons/fa";
 import { ImSearch } from "react-icons/im";
 import { FaUserPlus } from "react-icons/fa";
-
-// import { FaShoppingCart } from "react-icons/fa";
 import { FaCartArrowDown } from "react-icons/fa";
-
-
 
 const options = {
   burgerColorHover: "#eb4034",

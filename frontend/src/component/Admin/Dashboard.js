@@ -28,7 +28,6 @@ const Dashboard = () => {
       }
     });
 
-
   useEffect(() => {
     dispatch(getAdminProduct());
     dispatch(getAllOrders());
@@ -53,19 +52,16 @@ const Dashboard = () => {
     ],
   };
 
-
-
   const doughnutState = {
     labels: ["Out of Stock", "In Stock"],
     datasets: [
       {
         backgroundColor: ["#00A6B4", "#6800B4"],
         hoverBackgroundColor: ["#4B5000", "#35014F"],
-        data: [outOfStock, (( products && products.length )- outOfStock)],
+        data: [outOfStock, (products && products.length) - outOfStock],
       },
     ],
   };
-
 
   return (
     <div className="dashboard">

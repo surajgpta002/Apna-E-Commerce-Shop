@@ -68,11 +68,13 @@ function App() {
 
   return (
     <BrowserRouter>
+    
       <Header />
 
       {isAuthenticated && <UserOptions user={user} />}
 
       <Routes>
+
         <Route exact path="/" element={<Home />} />
 
         <Route exact path="/product/:id" element={<ProductDetails />} />
@@ -82,40 +84,10 @@ function App() {
         <Route path="/products/:keyword" element={<Products />} />
 
         <Route exact path="/search" element={<Search />} />
+
         <Route exact path="/about" element={<About />} />
+
         <Route exact path="/contact" element={<Contact />} />
-
-        <Route element={<ProtectedRoute />}>
-          <Route exact path="/account" element={<Profile />} />
-          <Route exact path="/me/update" element={<UpdateProfile />} />
-          <Route exact path="/password/update" element={<UpdatePassword />} />
-          <Route exact path="/login/shipping" element={<Shipping />} />
-          <Route exact path="/order/confirm" element={<ConfirmOrder />} />
-
-          {stripeApiKey && (
-            <Route
-              element={<ElementsLayout stripe={loadStripe(stripeApiKey)} />}
-            >
-              <Route path="/process/payment" element={<Payment />} />
-            </Route>
-          )}
-
-          <Route exact path="/success" element={<OrderSuccess />} />
-          <Route exact path="/orders" element={<MyOrders />} />
-          <Route exact path="/order/:id" element={<OrderDetails />} />
-        </Route>
-
-        <Route element={<ProtectedRoute isAdmin={true} />}>
-          <Route exact path="/admin/dashboard" element={<Dashboard />} />
-          <Route exact path="/admin/products" element={<ProductList />} />
-          <Route exact path="/admin/product" element={<NewProduct />} />
-          <Route exact path="/admin/product/:id" element={<UpdateProduct />} />
-          <Route exact path="/admin/orders" element={<OrderList />} />
-          <Route exact path="/admin/order/:id" element={<ProcessOrder />} />
-          <Route exact path="/admin/users" element={<UsersList />} />
-          <Route exact path="/admin/user/:id" element={<UpdateUser />} />
-          <Route exact path="/admin/reviews" element={<ProductReviews />} />
-        </Route>
 
         <Route exact path="/password/forgot" element={<ForgotPassword />} />
 
@@ -129,10 +101,62 @@ function App() {
 
         <Route exact path="/cart" element={<Cart />} />
 
+        <Route element={<ProtectedRoute />}>
+
+          <Route exact path="/account" element={<Profile />} />
+
+          <Route exact path="/me/update" element={<UpdateProfile />} />
+
+          <Route exact path="/password/update" element={<UpdatePassword />} />
+
+          <Route exact path="/login/shipping" element={<Shipping />} />
+
+          <Route exact path="/order/confirm" element={<ConfirmOrder />} />
+
+          {stripeApiKey && (
+            <Route
+              element={<ElementsLayout stripe={loadStripe(stripeApiKey)} />}
+            >
+              <Route path="/process/payment" element={<Payment />} />
+            </Route>
+          )}
+
+          <Route exact path="/success" element={<OrderSuccess />} />
+
+          <Route exact path="/orders" element={<MyOrders />} />
+
+          <Route exact path="/order/:id" element={<OrderDetails />} />
+
+        </Route>
+
+        <Route element={<ProtectedRoute isAdmin={true} />}>
+
+          <Route exact path="/admin/dashboard" element={<Dashboard />} />
+
+          <Route exact path="/admin/products" element={<ProductList />} />
+
+          <Route exact path="/admin/product" element={<NewProduct />} />
+
+          <Route exact path="/admin/product/:id" element={<UpdateProduct />} />
+
+          <Route exact path="/admin/orders" element={<OrderList />} />
+
+          <Route exact path="/admin/order/:id" element={<ProcessOrder />} />
+
+          <Route exact path="/admin/users" element={<UsersList />} />
+
+          <Route exact path="/admin/user/:id" element={<UpdateUser />} />
+
+          <Route exact path="/admin/reviews" element={<ProductReviews />} />
+
+        </Route>
+
         <Route path="*" element={<NotFound />} />
+
       </Routes>
 
       <Footer />
+
     </BrowserRouter>
   );
 }

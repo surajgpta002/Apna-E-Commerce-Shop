@@ -5,7 +5,6 @@ const ApiFeatures = require("../utils/apifeatures");
 const cloudinary = require("cloudinary");
 
 //Create Product -- Admin
-
 exports.createProduct = catchAsyncErrors(async (req, res, next) => {
   let images = [];
 
@@ -41,7 +40,6 @@ exports.createProduct = catchAsyncErrors(async (req, res, next) => {
 });
 
 //Get All Product
-
 exports.getAllProduct = catchAsyncErrors(async (req, res, next) => {
   const resultPerPage = 8;
   const productsCount = await Product.countDocuments();
@@ -81,7 +79,6 @@ exports.getAdminProducts = catchAsyncErrors(async (req, res, next) => {
 });
 
 //Get product details
-
 exports.getProductDetails = catchAsyncErrors(async (req, res, next) => {
   const product = await Product.findById(req.params.id);
 
@@ -96,7 +93,6 @@ exports.getProductDetails = catchAsyncErrors(async (req, res, next) => {
 });
 
 //Update Product ---  Admin
-
 exports.updateProduct = catchAsyncErrors(async (req, res, next) => {
   let product = await Product.findById(req.params.id);
 
@@ -148,7 +144,6 @@ exports.updateProduct = catchAsyncErrors(async (req, res, next) => {
 });
 
 //Delete Product --- Admin
-
 exports.deleteProduct = catchAsyncErrors(async (req, res, next) => {
   let product = await Product.findById(req.params.id);
 

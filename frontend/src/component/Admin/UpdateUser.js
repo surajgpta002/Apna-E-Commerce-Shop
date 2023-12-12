@@ -1,8 +1,8 @@
-import React, {  useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useAlert } from "react-alert";
 import { Button } from "@material-ui/core";
-import {  useNavigate , useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import MetaData from "../layout/MetaData";
 import MailOutlineIcon from "@material-ui/icons/MailOutline";
 import PersonIcon from "@material-ui/icons/Person";

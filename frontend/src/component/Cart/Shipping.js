@@ -15,7 +15,6 @@ import { useNavigate } from "react-router-dom";
 import CheckoutSteps from "../Cart/CheckoutSteps";
 
 const Shipping = () => {
-  
   const dispatch = useDispatch();
   const alert = useAlert();
   const navigate = useNavigate();

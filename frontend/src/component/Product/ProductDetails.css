@@ -275,9 +275,10 @@
   }
 
   .reviewCard > p {
-      font: 600 3vw "Roboto";
-    }
-    .reviewCardComment {
-      font: 300 5vw cursive;
-    }
+    font: 600 3vw "Roboto";
+  }
+  
+  .reviewCardComment {
+    font: 300 5vw cursive;
+  }
 }
