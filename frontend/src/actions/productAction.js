@@ -33,7 +33,7 @@ import {
 
 // Get All Products
 export const getProduct =
-  (keyword = "", currentPage = 1, price = [0, 250000], category, ratings = 0) =>
+  (keyword = "", currentPage = 1, price = [0, 100000], category, ratings = 0) =>
   async (dispatch) => {
     try {
       dispatch({

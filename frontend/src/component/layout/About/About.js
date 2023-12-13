@@ -1,12 +1,13 @@
 import React from "react";
 import "./AboutSection.css";
 import { Button, Typography, Avatar } from "@material-ui/core";
-import YouTubeIcon from "@material-ui/icons/YouTube";
+import Profile from "../../../images/Me.jpeg";
 import InstagramIcon from "@material-ui/icons/Instagram";
+
 const About = () => {
-  // const visitInstagram = () => {
-  //   window.location = "https://instagram.com/meabhisingh";
-  // };
+  const visitLikedin = () => {
+    window.location = "https://www.linkedin.com/in/surajgupta02/";
+  };
   return (
     <div className="aboutSection">
       <div></div>
@@ -18,27 +19,22 @@ const About = () => {
           <div>
             <Avatar
               style={{ width: "10vmax", height: "10vmax", margin: "2vmax 0" }}
-              src="https://res.cloudinary.com/tripleayt/image/upload/v1631555947/products/jpyibarlaxawvcvqjv5b.png"
+              src={Profile}
               alt="Founder"
             />
-            <Typography>Abhishek Singh</Typography>
-            {/* <Button onClick={visitInstagram} color="primary">
-              Visit Instagram
-            </Button> */}
-            <Button color="primary">Visit Instagram</Button>
+            <Typography>Suraj Gupta</Typography>
+            <Button onClick={visitLikedin} color="primary">
+              Visit Linkedin
+            </Button>
+
             <span>
-              This is a sample wesbite made by @meabhisingh. Only with the
-              purpose to teach MERN Stack on the channel 6 Pack Programmer
+              This is a sample wesbite made by @srkian_suraj. An online
+              destination where buyers shop for goods and sellers offer products
+              and services.
             </span>
           </div>
           <div className="aboutSectionContainer2">
-            <Typography component="h2">Our Brands</Typography>
-            <a
-              href="https://www.youtube.com/channel/UCO7afj9AUo0zV69pqEYhcjw"
-              target="blank"
-            >
-              <YouTubeIcon className="youtubeSvgIcon" />
-            </a>
+            <Typography component="h2">Follow Us</Typography>
 
             <a href="https://www.instagram.com/srkian_suraj/" target="blank">
               <InstagramIcon className="instagramSvgIcon" />
