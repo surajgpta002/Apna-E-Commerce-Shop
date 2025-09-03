@@ -44,6 +44,17 @@ const Products = () => {
 
   const priceHandler = (event, newPrice) => {
     setPrice(newPrice);
+    setCurrentPage(1);
+  };
+
+  const handleCategoryChange = (cat) => {
+    setCategory(cat);
+    setCurrentPage(1);
+  };
+
+  const handleRatingsChange = (e, newRating) => {
+    setRatings(newRating);
+    setCurrentPage(1);
   };
 
   useEffect(() => {
@@ -87,7 +98,7 @@ const Products = () => {
                 <li
                   className="category-link"
                   key={category}
-                  onClick={() => setCategory(category)}
+                  onClick={() => handleCategoryChange(category)}
                 >
                   {category}
                 </li>
@@ -98,9 +109,7 @@ const Products = () => {
               <Typography component="legend">Ratings Above</Typography>
               <Slider
                 value={ratings}
-                onChange={(e, newRating) => {
-                  setRatings(newRating);
-                }}
+                onChange={handleRatingsChange}
                 aria-labelledby="continuous-slider"
                 valueLabelDisplay="auto"
                 min={0}

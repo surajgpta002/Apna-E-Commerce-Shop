@@ -1,3 +1,6 @@
+//creating Errorhandler by extenting the Error class so every time we will 
+//a new instance of errorHandler class by passing the message and status code
+
 class ErrorHandler extends Error {
   constructor(message, statusCode) {
     super(message);
